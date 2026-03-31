@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhorias para a Escola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portal de Melhorias Escolares</h1>
+        <p>Compartilhe suas ideias para construirmos uma escola melhor juntos!</p>
+    </header>
 
+    <main>
+        <section class="form-section">
+            <h2>Sugerir Nova Melhoria</h2>
+            <form id="idea-form">
+                <input type="text" id="student-name" placeholder="Seu Nome (ou deixe em branco para anônimo)">
+                <input type="text" id="idea-title" placeholder="Qual é a sua ideia? (Ex: Reforma da quadra)" required>
+                <textarea id="idea-desc" rows="4" placeholder="Descreva os detalhes da sua sugestão..." required></textarea>
+                <button type="submit">Enviar Sugestão</button>
+            </form>
+        </section>
+
+        <section class="ideas-section">
+            <h2>Ideias da Comunidade</h2>
+            <div id="ideas-container">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
