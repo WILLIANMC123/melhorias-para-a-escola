@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>NeuralEdu - Dashboard em Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .student-cam { text-align: center; position: relative; overflow: hidden; }
+        .cam-feed { width: 100%; height: 180px; background: #000; border-radius: 10px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; }
+        .scan-line { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--neon-blue); box-shadow: 0 0 10px var(--neon-blue); animation: scan 3s infinite linear; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">NeuralEdu</div>
+        <div>
+            <a href="dashboard.html">Tempo Real</a>
+            <a href="relatorios.html">Relatórios</a>
+            <a href="index.html">Sair</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 style="margin-bottom: 20px;">Mapeamento da Turma: 3º Ano A</h2>
+        
+        <div class="grid" id="camera-grid">
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
