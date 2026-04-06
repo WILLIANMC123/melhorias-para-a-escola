@@ -9,11 +9,22 @@
 <body>
     <header>
         <h1>Portal de Melhorias Escolares</h1>
-        <p>Compartilhe suas ideias para construirmos uma escola melhor juntos!</p>
+        <p>Compartilhe suas ideias e ajude a melhorar nossa escola!</p>
     </header>
 
+    <!-- Navegação de Abas -->
+    <nav class="tabs">
+        <ul>
+            <li><a href="javascript:void(0)" class="tablink" onclick="openTab(event, 'submit')">Sugerir Melhorias</a></li>
+            <li><a href="javascript:void(0)" class="tablink" onclick="openTab(event, 'ideas')">Ver Sugestões</a></li>
+            <li><a href="javascript:void(0)" class="tablink" onclick="openTab(event, 'feedback')">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
     <main>
-        <section class="form-section">
+        <!-- Aba para Sugerir Melhorias -->
+        <div id="submit" class="tabcontent">
             <h2>Sugerir Nova Melhoria</h2>
             <form id="idea-form">
                 <input type="text" id="student-name" placeholder="Seu Nome (ou deixe em branco para anônimo)">
@@ -21,13 +32,33 @@
                 <textarea id="idea-desc" rows="4" placeholder="Descreva os detalhes da sua sugestão..." required></textarea>
                 <button type="submit">Enviar Sugestão</button>
             </form>
-        </section>
+        </div>
 
-        <section class="ideas-section">
+        <!-- Aba para Ver Sugestões -->
+        <div id="ideas" class="tabcontent">
             <h2>Ideias da Comunidade</h2>
             <div id="ideas-container">
-                </div>
-        </section>
+                <!-- As ideias serão carregadas dinamicamente aqui -->
+            </div>
+        </div>
+
+        <!-- Aba para Feedback -->
+        <div id="feedback" class="tabcontent">
+            <h2>Feedback da Comunidade</h2>
+            <form id="feedback-form">
+                <label for="feedback-rating">Qual sua satisfação com as melhorias?</label>
+                <select id="feedback-rating" required>
+                    <option value="">Selecione...</option>
+                    <option value="1">1 - Muito insatisfeito</option>
+                    <option value="2">2 - Insatisfeito</option>
+                    <option value="3">3 - Neutro</option>
+                    <option value="4">4 - Satisfeito</option>
+                    <option value="5">5 - Muito satisfeito</option>
+                </select>
+                <textarea id="feedback-comments" placeholder="Deixe seus comentários..."></textarea>
+                <button type="submit">Enviar Feedback</button>
+            </form>
+        </div>
     </main>
 
     <script src="script.js"></script>
